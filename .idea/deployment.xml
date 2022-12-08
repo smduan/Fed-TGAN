@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="fedtgan">
+    <serverData>
+      <paths name="Copy of project-level server 'fedtgan'">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/swarm-learning/duansm/Fed-TGAN" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Copy of project-level server 'fedtgan' (1)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/swarm-learning/duansm/Fed-TGAN" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="fedtgan">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/swarm-learning/duansm/Fed-TGAN" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

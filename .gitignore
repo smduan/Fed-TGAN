@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.save_model/
+.temp.py
+
+.SingleGAN*
+.data/adult/*
+.data/credit/*
+.data/intrusion/*
+
