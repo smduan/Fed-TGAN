@@ -135,4 +135,4 @@ dmypy.json
 .data/adult/*
 .data/credit/*
 .data/intrusion/*
-
+.idea
