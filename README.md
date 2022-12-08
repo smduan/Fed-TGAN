@@ -17,9 +17,7 @@ The average Jensen-Shannon Divergence (JSD) and the average Wasserstein Distance
 |Fed-TGAN (beta=100)|0.039|0.049|
 
 
-# Synthesize your own data
 
-All parameters are modified in the config file (```config.py```). 
 
 
 
