@@ -4,7 +4,7 @@ conf = {
 
 	##################################### The most commonly used parameters
     #data name
-    "data_name":"clinical",
+    "data_name":"adult",
 
 	#global epochs
 	"global_epochs" :20,
