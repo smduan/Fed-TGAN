@@ -131,7 +131,7 @@ dmypy.json
 .save_model/
 .temp.py
 
-.SingleGAN*
+.SingleGAN.py
 .data/adult/*
 .data/credit/*
 .data/intrusion/*
