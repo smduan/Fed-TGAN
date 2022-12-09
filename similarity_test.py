@@ -35,7 +35,7 @@ def get_fre(data):
     cf = data.value_counts()
     cate = []
     fre = []
-    for c, f in enumerate(cf):
+    for c, f in zip(cf._index,cf.values):
         cate.append(c)
         fre.append(f)
     cate_fre = pd.DataFrame({'cate':cate, 'fre':fre})
