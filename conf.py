@@ -20,19 +20,27 @@ conf = {
 	#number of labels
 	"num_classes": {
 		"clinical":2,
-		"adult":2
+		"adult":2,
+		"intrusion":10,
+		"covtype":7,
+		"tb":2,
+		"credit":2
 	},
 
 	#number of clients
 	"num_parties":3,
 
     #label column
-	"label_column": {
-		"clinical":"label",
-		"intrusion":"label",
-		"adult":"income_bracket",
-		"covtype":""
-	},
+	"label_column":{
+        "clinical": "label",
+        "credit": "Class",
+        "covtype": "Cover_Type",
+        "intrusion": "label",
+        "tb": "Condition",
+        "IRIS": "species",
+        "body": "class",
+		"adult":"income_bracket"
+    },
 
     #test data file
 	"test_dataset": {
@@ -69,10 +77,10 @@ conf = {
 	'income_bracket'
 ],
     "intrusion":['protocol_type', 'service', 'flag','label'],
-    "credit":[],
-    "covtype":['Wilderness_Area1', 'Wilderness_Area2', 'Wilderness_Area3', 'Soil_Type1', 'Soil_Type2', 'Soil_Type3', 'Soil_Type4', 'Soil_Type5', 'Soil_Type6', 'Soil_Type7', 'Soil_Type8', 'Soil_Type9', 'Soil_Type10', 'Soil_Type11', 'Soil_Type12', 'Soil_Type13', 'Soil_Type14', 'Soil_Type15', 'Soil_Type16', 'Soil_Type17', 'Soil_Type18', 'Soil_Type19', 'Soil_Type20', 'Soil_Type21', 'Soil_Type22', 'Soil_Type23', 'Soil_Type24', 'Soil_Type25', 'Soil_Type26', 'Soil_Type27', 'Soil_Type28', 'Soil_Type29', 'Soil_Type30', 'Soil_Type31', 'Soil_Type32', 'Soil_Type33', 'Soil_Type34', 'Soil_Type35', 'Soil_Type36', 'Soil_Type37', 'Soil_Type38', 'Soil_Type39','Soil_Type40'],
+    "credit":["Class"],
+    "covtype":['Wilderness_Area1', 'Wilderness_Area2', 'Wilderness_Area3', 'Soil_Type1', 'Soil_Type2', 'Soil_Type3', 'Soil_Type4', 'Soil_Type5', 'Soil_Type6', 'Soil_Type7', 'Soil_Type8', 'Soil_Type9', 'Soil_Type10', 'Soil_Type11', 'Soil_Type12', 'Soil_Type13', 'Soil_Type14', 'Soil_Type15', 'Soil_Type16', 'Soil_Type17', 'Soil_Type18', 'Soil_Type19', 'Soil_Type20', 'Soil_Type21', 'Soil_Type22', 'Soil_Type23', 'Soil_Type24', 'Soil_Type25', 'Soil_Type26', 'Soil_Type27', 'Soil_Type28', 'Soil_Type29', 'Soil_Type30', 'Soil_Type31', 'Soil_Type32', 'Soil_Type33', 'Soil_Type34', 'Soil_Type35', 'Soil_Type36', 'Soil_Type37', 'Soil_Type38', 'Soil_Type39','Soil_Type40','Cover_Type'],
     "clinical":["anaemia","diabetes","high_blood_pressure","sex","smoking","label"],
-    "tb":[]
+    "tb":["Condition"]
 },
 	##########################################################
 
