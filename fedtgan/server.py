@@ -308,8 +308,16 @@ class StatisticalAggregation(object):
         else:
             jsd_wd = wd
 
+
         # step 1
         sum_s1 = np.sum(jsd_wd, axis=0)
+
+        #if a value in sum_s1 is 0, which indicates that the distribution in each client is equal to the global data
+        # result in nan
+        index = np.where(sum_s1 == 0)
+        sum_s1 = np.delete(sum_s1, index)
+        jsd_wd = np.delete(jsd_wd, index, axis=1)
+
         ss = jsd_wd / sum_s1
 
         #step 2
@@ -317,6 +325,13 @@ class StatisticalAggregation(object):
 
         #step 3
         sum_ss = np.sum(ss)
+
+        #if a value in sum_ss is 0
+        #will result in nan
+        index = np.where(sum_ss==0)
+        sum_ss = np.delete(sum_ss,index)
+        ss = np.delete(ss, index)
+
         clients_number = np.array(list(self.client_num.values()))
         total_number = np.sum(clients_number)
         sd = (clients_number / total_number)*(1-ss/sum_ss)

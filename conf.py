@@ -4,7 +4,7 @@ conf = {
 
 	##################################### The most commonly used parameters
     #data name
-    "data_name":"adult",
+    "data_name":"covtype",
 
 	#global epochs
 	"global_epochs" :20,
@@ -46,21 +46,24 @@ conf = {
 	"test_dataset": {
 		"clinical":"./data/clinical/clinical_test.csv",
 		"intrusion":"./data/intrusion/intrusion_test.csv",
-		"adult":"data/adult/adult_test.csv"
+		"adult":"./data/adult/adult_test.csv",
+		"covtype":"./data/covtype/covtype_test.csv"
 	},
 
     #training data file
 	"train_dataset" : {
 		"clinical":"./data/clinical/clinical_train.csv",
 		"intrusion":"./data/intrusion/intrusion_train.csv",
-		"adult":"data/adult/adult_train.csv"
+		"adult":"./data/adult/adult_train.csv",
+		"covtype":"./data/covtype/covtype_train.csv"
 	},
 
 	#synthetic data
 	"syn_data":{
 		"clinical":"./data/clinical/clinical_syn.csv",
 		"intrusion":"./data/intrusion/intrusion_syn.csv",
-		"adult":"./data/adult/adult_syn.csv"
+		"adult":"./data/adult/adult_syn.csv",
+		"covtype":"./data/covtype/covtype_syn.csv",
 	},
 
     #discrete columns
@@ -79,7 +82,16 @@ conf = {
     "intrusion":['protocol_type', 'service', 'flag','label'],
     "credit":["Class"],
     "covtype":['Wilderness_Area1', 'Wilderness_Area2', 'Wilderness_Area3', 'Soil_Type1', 'Soil_Type2', 'Soil_Type3', 'Soil_Type4', 'Soil_Type5', 'Soil_Type6', 'Soil_Type7', 'Soil_Type8', 'Soil_Type9', 'Soil_Type10', 'Soil_Type11', 'Soil_Type12', 'Soil_Type13', 'Soil_Type14', 'Soil_Type15', 'Soil_Type16', 'Soil_Type17', 'Soil_Type18', 'Soil_Type19', 'Soil_Type20', 'Soil_Type21', 'Soil_Type22', 'Soil_Type23', 'Soil_Type24', 'Soil_Type25', 'Soil_Type26', 'Soil_Type27', 'Soil_Type28', 'Soil_Type29', 'Soil_Type30', 'Soil_Type31', 'Soil_Type32', 'Soil_Type33', 'Soil_Type34', 'Soil_Type35', 'Soil_Type36', 'Soil_Type37', 'Soil_Type38', 'Soil_Type39','Soil_Type40','Cover_Type'],
-    "clinical":["anaemia","diabetes","high_blood_pressure","sex","smoking","label"],
+    # "covtype": ['Wilderness_Area1', 'Wilderness_Area2', 'Wilderness_Area3', 'Soil_Type1', 'Soil_Type2',
+		# 			'Soil_Type3', 'Soil_Type4', 'Soil_Type6', 'Soil_Type8', 'Soil_Type9',
+		# 			'Soil_Type10', 'Soil_Type11', 'Soil_Type12', 'Soil_Type13', 'Soil_Type14', 'Soil_Type15',
+		# 			'Soil_Type16', 'Soil_Type17', 'Soil_Type18', 'Soil_Type19', 'Soil_Type20', 'Soil_Type21',
+		# 			'Soil_Type22', 'Soil_Type23', 'Soil_Type24', 'Soil_Type25', 'Soil_Type26', 'Soil_Type27',
+		# 			'Soil_Type28', 'Soil_Type29', 'Soil_Type30', 'Soil_Type31', 'Soil_Type32', 'Soil_Type33',
+		# 			'Soil_Type34', 'Soil_Type35', 'Soil_Type36', 'Soil_Type37', 'Soil_Type38', 'Soil_Type39',
+		# 			'Soil_Type40', 'Cover_Type'],
+
+		"clinical":["anaemia","diabetes","high_blood_pressure","sex","smoking","label"],
     "tb":["Condition"]
 },
 	##########################################################

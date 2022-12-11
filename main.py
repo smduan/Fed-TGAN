@@ -9,6 +9,8 @@ from fedtgan.model import Discriminator, Generator,weights_init_normal
 from utils import get_data
 import copy
 from similarity_test import table_similarity
+import numpy as np
+
 
 def synthesize(n_sample):
 
@@ -61,6 +63,7 @@ def synthesize(n_sample):
     else:
         jsd = sa.compute_jsd_matrix()
         wd = sa.compute_wd_matrix(vir_data)
+
         new_weight = sa.compute_new_weight(jsd,wd)
         for key in train_datasets.keys():
             client_weight[key] = new_weight[key]
