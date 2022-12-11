@@ -136,3 +136,5 @@ dmypy.json
 .data/credit/*
 .data/intrusion/*
 .idea
+
+.data*
